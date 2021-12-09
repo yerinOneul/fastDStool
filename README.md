@@ -5,14 +5,17 @@ Parameters:
 fill_nan : Dictionary, The key is "replace" ans "fill_nan". Default = None.
 The value for each key can also dictionary and fill values for each column.
 Change specific data to nan value and fill it with fill value.
+
 Ex) fill_nan = {"replace":{"0":np.nan},"fill_nan" : {"Weight":"mean"}
 
 encoders: Dictionary, key is encoded feature name, value is encoders. Default = None.
 Apply encoder to the data.
+
 Ex) encoders = { “f_name1” : OneHotEncoder(), “f_name2”: LableEncoder() }
 
 scalers: A list of various scaler. Default = None.
 Apply scaler to the data using loop statement.
+
 Ex) scalers = [StandardScaler(), MinMaxScaler(), MaxAbsScaler(), RobustScaler()]
 
 outliers: Dictionary, the key is categorical or numerical, the value is upper, lower bound.
