@@ -20,10 +20,10 @@ Ex) scalers = [StandardScaler(), MinMaxScaler(), MaxAbsScaler(), RobustScaler()]
 
 outliers: Dictionary, the key is categorical or numerical, the value is upper, lower bound.
 "categorical"'s value is dictionary, "numerical"'s value is also dictionary, and key is feature name, value is list of upper,lower bound.
-	   Ex) outliers = { “categorical” : {“f_name1”:”Z”}, “numerical” : {“f_name2” : [100,0] } }
+	   
+Ex) outliers = { “categorical” : {“f_name1”:”Z”}, “numerical” : {“f_name2” : [100,0] } }
 
 -	Model building & Testing
-build_test_models(self, data, predictor_names, target_name, test_size, models = None, params = None, k_fold = None )
 
 Parameters: 
 predictor_names : List of names of predictor features.
@@ -44,7 +44,7 @@ Ex) models = [DecisionTreeClassifier(),LogisticRegression(),GaussianNB()]
 k_fold : A list of k values.
 Ex) K_fold = [3,5]
 
-- Build test models and Finding the best result.
+- Finding the best result.
 
 There are no parameters and return the scores and parameters of the model with the highest score among the generated models.
 
@@ -74,6 +74,7 @@ Example #1
     combination .best_score
 
     combination .best_params
+    
 
   Example 2 (simpler way)
 
